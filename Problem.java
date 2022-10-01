@@ -28,12 +28,8 @@ public class Problem{
     public ArrayList<Route> getMap() {
         return airportMap;
     }
-
-    //This method checks if a particular airport is the required destination of the route.
-    public boolean goal_test(int state){
-        return (Objects.equals(this.goal_state, state));
-    }
-
+    
+    
     // The action methods tries to create a airport code with their corresponding connected airports known as neighbours
     public ArrayList<Integer> actions(int state){
         ArrayList<Integer> neighbours = new ArrayList<>();
@@ -45,4 +41,10 @@ public class Problem{
         return neighbours;
 
     }
+
+    //This method checks if a particular airport is the required destination of the route.
+    public boolean goal_test(int state){
+        return (Objects.equals(this.goal_state, state));
+    }
+
 }
