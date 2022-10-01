@@ -226,6 +226,10 @@ class theObjects{
 
 
     /**This methods computes the distance between two airports using the haversine Formula*/
+    
+      public static double haversineFormula(double val) {
+        return Math.pow(Math.sin(val / 2), 2);
+    }
 
     private static final int radius = 6371;
     public static double distance(double initial_latitude, double initLong,
@@ -239,12 +243,10 @@ class theObjects{
         return radius * c;
     }
 
-    public static double haversineFormula(double val) {
-        return Math.pow(Math.sin(val / 2), 2);
-    }
 
 
-    public static int city_and_counttry_AirportID(String city, String country){
+
+    public static int city_and_country_AirportID(String city, String country){
         int ariportIdKeeper = 0;
         for (Airport airport: RouteFinder.airportObjects) {
             if (airport.getCity().equals(city) || airport.getCountry().equals(country)) {
